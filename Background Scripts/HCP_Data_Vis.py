@@ -33,6 +33,12 @@ import meshio # version 4.0.16
 import community.community_louvain
 from plotly.offline import iplot, init_notebook_mode
 
+# Re-inject deprecated aliases back into NumPy to prevent third-party library crashes
+np.float = float
+np.bool = bool
+np.int = int
+np.object = object
+
 ########################
 # Pre-defined settings #
 ########################
